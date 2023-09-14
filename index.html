@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONEU.Portfolio</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://seattleowl.com/pointer.js/pointer.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+
+
+</head>
+<body class="hide">
+    <div class='cursor'></div>
+    <section class="sc-loader">
+        <div class="loader-inner">
+            <div class="text-first">
+                <strong>Honest</strong>
+            </div>
+            <div class="text-wrap">
+                <strong>Websites</strong>
+                <strong>Planning</strong>
+                <strong>Creativity</strong>
+                <strong>Publisher</strong>
+            </div>
+        </div>
+    </section>
+    <header class="header">
+        <div class="header-inner">
+            <div class="inner-area">
+                <h1 class="logo-box">
+                    <a href="" class="logo">
+                       <img src="./assets/img/logo.png" alt="">
+                    </a>
+                </h1>
+                <nav class="gnb">
+                    <ul class="gnb-list">
+                        <li class="gnb-item"><a href="#about">About</a></li>
+                        <li class="gnb-item"><a href="#work">Work</a></li>
+                        <li class="gnb-item"><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="sns-box">
+                    <ul class="sns-list">
+                        <li class="sns-item"><a href="https://github.com/oneuya">Github</a></li>
+                        <li class="sns-item"><a href="https://velog.io/@oneuya">Velog</a></li>
+                    </ul>
+                </div>
+                <div class="m-gnb">
+                    <button class="m-btn">menu</button>
+                </div>
+            </div>
+            <div class="m-menu">
+                <ul class="m-list">
+                    <div class="m-nav">
+                        <li class="m-item"><a href="#about">About</a></li>
+                        <li class="m-item"><a href="#work">Work</a></li>
+                        <li class="m-item"><a href="#contact">Contact</a></li>
+                    </div>
+                    <div class="m-sns">
+                        <li class="m-item"><a href="https://github.com/oneuya">Github</a></li>
+                        <li class="m-item"><a href="https://velog.io/@oneuya">Velog</a></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        
+        <section class="header-fix">
+            <button class="fix-btn">
+                more
+                <!-- <div class="line top"></div>
+                <div class="line mid"></div>
+                <div class="line bot"></div> -->
+            </button>
+            <div class="side-area">
+                <ul class="side-list">
+                    <li class="side-item">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="#work">Work</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="#contact">Contact</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="https://github.com/oneuya">Github</a>
+                    </li>
+                    <li class="side-item">
+                        <a href="https://velog.io/@oneuya">Velog</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </header>
+    <main class="main">
+        
+        <section class="sc-about" id="about">
+            <div class="about-inner">
+                <div class="logo-area">
+                    <div class="text-box">
+                        <p class="fir">Honest</p>
+                        <p class="sec">Publisher</p>
+                    </div>
+                </div>
+                <div class="swiper-area">
+                    <div class="area-wrapper">
+                        <div class="swiper top-swiper">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <div class="box yellow">
+                                        <div class="text-box">
+                                            <div class="icon-box">
+                                                <img src="./assets/img/swiper1.png" alt="">
+                                                <div class="btn-box">
+                                                    <div class="swiper-button-next"></div>
+                                                    <div class="swiper-button-prev"></div>
+                                                </div>
+                                            </div>
+                                            <strong>Maybe what I was looking for;</strong>
+                                            <p>눈앞의 문제를 배움의 기회로 삼겠습니다.</p>
+                                            <div class="img"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="box gray">
+                                        <div class="text-box">
+                                              <div class="icon-box">
+                                                <img src="./assets/img/swiper3.png" alt="">
+                                                <div class="btn-box">
+                                                    <div class="swiper-button-next"></div>
+                                                    <div class="swiper-button-prev"></div>
+                                                </div>
+                                            </div>
+                                            <strong>Communicate as always;</strong>
+                                            <p>경청하고, 소통하며, 협력하고, 타협하겠습니다.</p>
+                                            <div class="img"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="box green">
+                                        <div class="text-box">
+                                              <div class="icon-box">
+                                                <img src="./assets/img/swiper2.png" alt="">
+                                                <div class="btn-box">
+                                                    <div class="swiper-button-next"></div>
+                                                    <div class="swiper-button-prev"></div>
+                                                </div>
+                                            </div>
+                                            <strong>So can be a different tomorrow;</strong>
+                                            <p>새로운 배움을 귀하게 여김을 잊지 않겠습니다.</p>
+                                            <div class="img"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ab-bg">
+                <div class="overlay"></div>
+                <img src="./assets/img/abbg3.png" alt="">
+            </div>
+        </section>
+        <section class="sc-work" id="work">
+            <ul class="work-list">
+                <li class="work-item">
+                    <div class="img-box">
+                        <img src="./assets/img/work1.jpg" alt="">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="text-box">
+                        <div class="em-box">
+                            <em>마크업</em>
+                            <em>웹접근성</em>
+                            <em>PC</em>
+                        </div>
+                        <p class="name">서울시청</p>
+                        <p class="desc">원활한 Tab 이동을 목표로 웹접근성을 고려한 마크업을 중점으로 제작한 서울시청 클론 코딩 사이트입니다.</p>
+                           <div class="work-sns gray">
+                            <a href="https://oneuya.github.io/seoul-city/">GO SITE</a><br class="m">
+                            <a href="https://www.notion.so/bdf768e72e064f97b1bef02a9c11bda0?pvs=4">Code review</a>
+                            <a href="https://github.com/oneuya/seoul-city.git">Github</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="work-item">
+                    <div class="img-box">
+                        <img src="./assets/img/work2.jpg" alt="">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="text-box">
+                        <div class="em-box">
+                            <em>Swiper</em>
+                            <em>jQuery</em>
+                            <em>Mobile</em>
+                            <em>적응형</em>
+                        </div>
+                        <p class="name">안다르</p>
+                        <p class="desc">효율적인 Class 작업으로 동일 영역을 제작하고, 시맨틱 마크업을 통해 기존 안다르 사이트를 개선한 모바일 클론 코딩 사이트입니다.</p>
+                           <div class="work-sns yellow">
+                           <a href="https://oneuya.github.io/andar/">GO SITE</a><br class="m">
+                            <a href="https://www.notion.so/ANDAR-1f9d261cd52d46f6a3b52821cbff4561?pvs=4">Code review</a>
+                            <a href="https://github.com/oneuya/andar.git">Github</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="work-item">
+                    <div class="img-box">
+                        <img src="./assets/img/work3.jpg" alt="">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="text-box">
+                        <div class="em-box">
+                            <em>Swiper</em>
+                            <em>jQuery</em>
+                            <em>반응형</em>
+                        </div>
+                        <p class="name">우아한 형제들</p>
+                        <p class="desc">Swiper Slide의 개별 모션 적용과 Css를 활용한 흐르는 배너 제작 등 다양한 Css 및 제이쿼리 모션과 <br>
+                            미디어쿼리를 사용한 반응형 클론 코딩 사이트입니다.</p>
+                           <div class="work-sns green">
+                           <a href="https://oneuya.github.io/woowahan/">GO SITE</a><br class="m">
+                            <a href="https://www.notion.so/d5e386ad6d514ce58c5d28403beb3825?pvs=4">Code review</a>
+                            <a href="https://github.com/oneuya/woowahan.git">Github</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="work-item">
+                    <div class="img-box">
+                        <img src="./assets/img/work4.jpg" alt="">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="text-box">
+                        <div class="em-box">
+                            <em>Canvas</em>
+                            <em>Text-split</em>
+                            <em>Gsap</em>
+                            <em>ScrollTrigger</em>
+                            <em>인터렉티브</em>
+                        </div>
+                        <p class="name">Outfit7</p>
+                        <p class="desc">
+                            Canvas와 Gsap 라이브러리를 사용한 인터렉티브 사이트 제작에 중점을 둔 적응형 PC 사이트입니다.
+                        </p>
+                           <div class="work-sns yellow">
+                           <a href="https://oneuya.github.io/outfit7/">GO SITE</a><br class="m">
+                            <a href="https://www.notion.so/OUTFIT7-8588cb8df32a49afbc423b4a06ef34eb?pvs=4">Code review</a>
+                            <a href="https://github.com/oneuya/outfit7.git">Github</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="work-item">
+                    <div class="img-box">
+                        <img src="./assets/img/work5.jpg" alt="">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="text-box">
+                        <div class="em-box">
+                            <em>데이터바인딩</em>
+                            <em>Json</em>
+                            <em>Swiper</em>
+                        </div>
+                        <p class="name">Flip</p>
+                        <p class="desc">JSON 데이터 형식과 Fecth 문법을 활용해 데이터바인딩을 시도한 반응형 클론 코딩 사이트입니다.</p>
+                           <div class="work-sns gray">
+                           <a href="https://oneuya.github.io/frip/">GO SITE</a><br class="m">
+                            <a href="https://www.notion.so/FRIP-016696990a4d4ccc980c902e00fd5895?pvs=4">Code review</a>
+                            <a href="https://github.com/oneuya/frip.git">Github</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="work-item">
+                    <div class="img-box">
+                        <img src="./assets/img/work6.png" alt="">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="text-box">
+                            <div class="em-box">
+                                <em>Gsap</em>
+                                <em>ScrollTrigger</em>
+                                <em>Swiper</em>
+                                <em>인터렉티브</em>
+                            </div>
+                            <p class="name">대학내일</p>
+                            <p class="desc">JQCC 사이트를 레퍼런스로 제작한 대학내일 반응형 사이트입니다.</p>
+                        <div class="work-sns green">
+                           <a href="https://oneuya.github.io/univ/">GO SITE</a><br class="m">
+                            <a href="https://www.notion.so/9c51d6fe52af46ed8b4a4abf75c17e49?pvs=4">Code review</a>
+                            <a href="https://github.com/oneuya/univ.git">Github</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <section class="sc-contact" id="contact">
+            <div class="text-area">
+                <h2 class="title">
+                    🔗Contact 
+                    <div class="sns-area">
+                        <a href="https://github.com/oneuya">
+                            Github
+                        </a>
+                        <a href="https://velog.io/@oneuya">
+                            Velog
+                        </a>
+                    </div>
+                </h2>
+                <a href="">Wonu831@gmail.com</a>
+                
+            </div>
+            <div class="cc">
+                <p>©2023 ONEU</p>
+            </div>
+        
+        </section>
+    </footer>
+
+</body>
+</html>
