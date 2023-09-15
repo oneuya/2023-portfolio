@@ -733,7 +733,8 @@ footer .sc-contact .cc {
   height: 100%;
   background-image: linear-gradient(180deg, rgba(20, 20, 20, 0.3294117647) 75%, #141414 99.95%);
 }
-.sc-about .ab-bg img {
+.sc-about .ab-bg .img {
+  background-image: url(/assets/img/abbg3.png);
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
