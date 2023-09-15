@@ -6,18 +6,19 @@
         top: 15px;
         right: 2%;
         opacity: 0;
+        z-index: 777;
+
         .fix-btn{
             position: fixed;
             right: 50px;
             width: 70px;
-            height: 50px;
+            height: 40px;
             border-radius: 30px;
             border: 1px solid #4f8a8b97;
             background: #4f8a8b97;
             color: #fff;
             backdrop-filter: blur(8px);
             font-weight: 600;
-            z-index: 999;
 
             .line{
                 position: absolute;
@@ -37,13 +38,13 @@
             }
         }
         .side-area{
+            position: fixed;
             opacity: 0;
-            position: absolute;
             right: 50px;
             pointer-events: none;
             transition: all 0.3s;
             &.on{
-                right: 100px;
+                right: 140px;
                 opacity: 1;
                 pointer-events: all;
             }
@@ -58,7 +59,7 @@
                     border: 1px solid #4f8a8b97;
                     background: #19191961;
                     width: auto;
-                    height: 50px;
+                    height: 40px;
                     border-radius: 30px;
                     color: #fff;
                     z-index: 1;
@@ -208,7 +209,7 @@
 
     .ab-bg{
         position: absolute;
-        top: 0px;
+        top: -12%;
         width: 100%;
         height:100vh;
         z-index: -1;
@@ -220,6 +221,7 @@
         }
         .img{
             background-image: url('./../img/abbg3.png');
+            background-repeat: no-repeat;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -532,6 +534,33 @@
 }
 
 @media(max-width: 680px){
+    
+    .main{
+        .header-fix{
+            .side-area{
+                opacity: 0;
+                top: 130px;
+                right: 40px;
+                pointer-events: none;
+                transition: all 0.3s;
+                &.on{
+                    display: block;
+                    right: 40px;
+                    top: 150px;
+                    opacity: 1;
+                    pointer-events: all;
+                }
+                .side-list{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    .side-item{
+                        width: 90px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
 
     .sc-work{
         .work-list{
@@ -544,20 +573,29 @@
 
         }
     }
+}
 
 }
 
 @media(max-width: 425px){
+
+    .header-fix{
+        display: none;
+    }
 
     .sc-about{
         padding: 75px 0;
         .about-inner{
             gap: 55px;
             .logo-area{
-                font-size: 55px;
-                font-weight: 700;
-                line-height: 60px;
+                font-size: 45px;
+                line-height: 55px;
             }
+
+            .ab-bg{
+                top: -10%;
+            }
+
             .swiper-area{
                 .area-wrapper{
                     .top-swiper{
@@ -575,26 +613,6 @@
             }
         }
     }
-}
-
-@media(max-width: 425px){
-
-    
-    .sc-about{
-        padding: 75px 0;
-        .about-inner{
-            gap: 55px;
-            .logo-area{
-                font-size: 45px;
-                line-height: 55px;
-            }
-        }
-
-        .ab-bg{
-            top: -10%;
-        }
-    }
-
     .sc-work{
         .work-list{
             .work-item{
