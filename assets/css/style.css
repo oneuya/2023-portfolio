@@ -204,6 +204,8 @@ body.hide {
 
 .header {
   position: relative;
+  background-color: #141414;
+  z-index: 888;
 }
 .header .header-inner {
   display: flex;
@@ -249,7 +251,6 @@ body.hide {
 }
 .header .header-fix {
   position: fixed;
-  z-index: 777;
   top: 15px;
   right: 2%;
   opacity: 0;
@@ -267,6 +268,7 @@ body.hide {
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   font-weight: 600;
+  z-index: 2;
 }
 .header .header-fix .fix-btn .line {
   position: absolute;
@@ -607,6 +609,79 @@ footer .sc-contact .cc {
 .main {
   position: relative;
 }
+.main .header-fix {
+  position: relative;
+  top: 15px;
+  right: 2%;
+  opacity: 0;
+}
+.main .header-fix .fix-btn {
+  position: fixed;
+  right: 50px;
+  width: 70px;
+  height: 50px;
+  border-radius: 30px;
+  border: 1px solid rgba(79, 138, 139, 0.5921568627);
+  background: rgba(79, 138, 139, 0.5921568627);
+  color: #fff;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  font-weight: 600;
+  z-index: 999;
+}
+.main .header-fix .fix-btn .line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 25px;
+  border-top: 1px solid #141414;
+}
+.main .header-fix .fix-btn .line.top {
+  top: 17px;
+}
+.main .header-fix .fix-btn .line.bot {
+  bottom: 17px;
+}
+.main .header-fix .side-area {
+  opacity: 0;
+  position: absolute;
+  right: 50px;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+.main .header-fix .side-area.on {
+  right: 100px;
+  opacity: 1;
+  pointer-events: all;
+}
+.main .header-fix .side-area .side-list {
+  display: flex;
+  gap: 10px;
+}
+.main .header-fix .side-area .side-list .side-item {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(79, 138, 139, 0.5921568627);
+  background: rgba(25, 25, 25, 0.3803921569);
+  width: auto;
+  height: 50px;
+  border-radius: 30px;
+  color: #fff;
+  z-index: 1;
+  transition: 0.3s;
+  font-size: 15px;
+}
+.main .header-fix .side-area .side-list .side-item:hover {
+  background: #4F8A8B;
+}
+.main .header-fix .side-area .side-list .side-item a {
+  display: block;
+  text-align: center;
+  z-index: 999;
+  padding: 0 20px;
+}
 
 .sc-about {
   position: relative;
@@ -734,7 +809,7 @@ footer .sc-contact .cc {
   background-image: linear-gradient(180deg, rgba(20, 20, 20, 0.3294117647) 75%, #141414 99.95%);
 }
 .sc-about .ab-bg .img {
-  background-image: url(/assets/img/abbg3.png);
+  background-image: url("./../img/abbg3.png");
   width: 100%;
   height: 100%;
   -o-object-fit: cover;

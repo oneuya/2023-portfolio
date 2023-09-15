@@ -44,9 +44,9 @@ $(function(){
 
     scrollTrigger: {
       trigger: 'main', 
-      scrub:0.3,
-      start: '2% 0%', 
-      end: '10% 100%', 
+      scrub:0.5,
+      start: '0% 0%', 
+      end: '0% 100%', 
       /* markers:true */
   },
       opacity:1
@@ -89,18 +89,18 @@ $(function(){
 
       scrollTrigger: {
         trigger: 'main',
-        scrub:1.8, 
+        scrub:2, 
         start: '0% 0%', 
         end: '95% 100%',
         /* markers:true,  */
     },
     })
     
-    work.from('.sc-work .work-item:nth-child(2)',2,{opacity:0 ,yPercent:50 ,delay:1}),
-    work.from('.sc-work .work-item:nth-child(1)',2.5,{opacity:0 ,xPercent:-50,delay:1}),
-    work.from('.sc-work .work-item:nth-child(6)',3,{opacity:0 ,xPercent:50,delay:1}),
-    work.from('.sc-work .work-item:nth-child(4)',3,{opacity:0 ,yPercent:50,delay:1}),
-    work.from('.sc-work .work-item:nth-child(3)',3,{opacity:0 ,xPercent:-50,delay:1}),
+    work.from('.sc-work .work-item:nth-child(2)',2,{opacity:0 ,yPercent:50 ,delay:0.5}),
+    work.from('.sc-work .work-item:nth-child(1)',2.5,{opacity:0 ,xPercent:-50,delay:0.5}),
+    work.from('.sc-work .work-item:nth-child(6)',3,{opacity:0 ,xPercent:50,delay:0.5}),
+    work.from('.sc-work .work-item:nth-child(4)',3,{opacity:0 ,yPercent:50,delay:0.5}),
+    work.from('.sc-work .work-item:nth-child(3)',3,{opacity:0 ,xPercent:-50,delay:0.5}),
     work.from('.sc-work .work-item:nth-child(5)',3,{opacity:0 ,xPercent:50,delay:1})
 
     // 680px 이상에서 사용할 스크립트
@@ -114,7 +114,7 @@ $(function(){
 
       scrollTrigger: {
         trigger: 'main',
-        scrub:1.8, 
+        scrub:2, 
         start: '0% 0%', 
         end: '95% 100%',
         /* markers:true,  */
@@ -135,15 +135,14 @@ $(function(){
 
       scrollTrigger: {
         trigger: 'main',
-        scrub:2, 
-        start: '80% 0%', 
-        end: '80% 100%', 
-       /*  markers:true, */
+        scrub:1, 
+        start: '82% 0%', 
+        end: '82% 100%', 
+        markers:true,
     },
     })
 
-    footer.from('footer',3,{opacity:0, yPercent:50,delay:1})
-
+    footer.from('.footer',{opacity:0})
     
     lastWidth = window.innerWidth;
     $(window).resize(function(){
