@@ -204,8 +204,6 @@ body.hide {
 
 .header {
   position: relative;
-  background-color: #141414;
-  z-index: 888;
 }
 .header .header-inner {
   display: flex;
