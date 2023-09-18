@@ -36,6 +36,11 @@ body{
     mix-blend-mode:difference;
   }
 
+  li{ 
+    will-change: transform;
+  }
+
+
   @media(max-width: 425px){
     *{
       cursor: pointer;

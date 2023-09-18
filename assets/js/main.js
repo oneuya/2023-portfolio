@@ -142,7 +142,7 @@ $(function(){
     },
     })
 
-    footer.from('.footer',{opacity:0})
+    footer.from('.footer-bg, .sc-contact',{opacity:0})
     
     lastWidth = window.innerWidth;
     $(window).resize(function(){
