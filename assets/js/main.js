@@ -89,8 +89,8 @@ $(function(){
 
       scrollTrigger: {
         trigger: 'main',
-        scrub:2, 
-        start: '0% 0%', 
+        scrub:3, 
+        start: '-2% 0%', 
         end: '95% 100%',
         /* markers:true,  */
     },
@@ -135,9 +135,9 @@ $(function(){
 
       scrollTrigger: {
         trigger: 'main',
-        scrub:1, 
-        start: '80% 0%', 
-        end: '80% 100%', 
+        scrub:2.5, 
+        start: '83% 0%', 
+        end: '83.5% 100%', 
         /* markers:true, */
     },
     })
