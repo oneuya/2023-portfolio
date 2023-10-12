@@ -114,11 +114,13 @@
         position: absolute;
         top: 18px;
         right: 2%;
-        opacity: 0;
         z-index: 777;
+
     
         .fix-btn{
             position: fixed;
+            opacity: 0;
+            display: none;
             right: 50px;
             width: 70px;
             height: 40px;
@@ -128,7 +130,6 @@
             color: #fff;
             backdrop-filter: blur(8px);
             font-weight: 600;
-    
             .line{
                 position: absolute;
                 left: 50%;

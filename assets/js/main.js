@@ -6,7 +6,7 @@ $(function(){
       setTimeout(function() {
         $("body").removeClass('hide')
         $(".sc-loader").fadeOut(1500);
-      },3000); // 3000밀리초 = 3초
+      },30); // 3000밀리초 = 3초
     });
 
       // 커서 커스텀
@@ -35,22 +35,23 @@ $(function(){
 })
 
    // 사이드메뉴
+
    $('.fix-btn').click(function(){
 
     $('.side-area, .side-item').toggleClass('on')
   });
 
-  gsap.to('.header-fix',{ 
+  gsap.to('.fix-btn',{ 
 
     scrollTrigger: {
       trigger: 'main', 
       scrub:0.5,
-      start: '0% 0%', 
-      end: '0% 100%', 
+      start: '5% 0%', 
+      end: '5% 100%', 
       /* markers:true */
   },
-      opacity:1
-
+      opacity:1,
+      display:"block"
   })
 
   // about 스와이퍼
