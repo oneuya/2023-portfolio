@@ -6,7 +6,7 @@ $(function(){
       setTimeout(function() {
         $("body").removeClass('hide')
         $(".sc-loader").fadeOut(1500);
-      },30); // 3000밀리초 = 3초
+      },3000); // 3000밀리초 = 3초
     });
 
       // 커서 커스텀
@@ -136,9 +136,9 @@ $(function(){
 
       scrollTrigger: {
         trigger: 'main',
-        scrub:2.5, 
-        start: '83% 0%', 
-        end: '83.5% 100%', 
+        scrub:2, 
+        start: '90% 0%', 
+        end: '90% 100%', 
         /* markers:true, */
     },
     })
