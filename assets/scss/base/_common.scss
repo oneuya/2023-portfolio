@@ -1,13 +1,12 @@
 
 html{
   scroll-behavior: smooth;
-  overflow: hidden;
   font-family: 'Pretendard';
-
 }
 body{
     background-color: #141414;
     color: #fff;
+    width: 100%;
     overflow-x: hidden;
     &.hide{
         overflow: hidden;

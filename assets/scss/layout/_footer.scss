@@ -1,75 +1,76 @@
 
 footer{
-/*     position: relative;
-    margin-top: 100px;
-    background: linear-gradient(-55deg, #eeeeee, #4F8A8B, #FBD46D);
-    background-size: 300% 300%;
-    animation: gradient 10s ease infinite;
-    color: transparent;
-    -webkit-background-clip: text; */
-
-    margin-top: 150px;
-
-    .footer-bg{
-        position: absolute;
-        bottom: 0;
-        z-index: -1;
-        background-image: url('./../img/abbg3.png');
-        background-repeat: no-repeat;
-        background-position: 0px -680px;
-        width: 100%;
-        height: 700px;
-        object-fit: cover;
-        .overlay{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-image: linear-gradient(0deg, #14141454 55%, #141414 90.95%);
-        }
-    }
-
+    width: 100%;
+    height: auto;
     .sc-contact{
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
-        padding: 40px;
-        .text-area{
-          display: flex;
-          flex-direction: column;
-            .title{
+        position: relative;
+        width: 100%;
+        height: 300px;
+        .contact-inner{
+            position: relative;
             display: flex;
-            gap: 30px;
+            justify-content: space-between;
             align-items: end;
-            line-height: 75px;
-            font-size: 75px;
-            font-weight: 600; 
-              .sns-area{
+            padding: 40px;
+            .text-area{
+                .title{
                 display: flex;
-                gap: 15px;
-                a{
+                gap: 30px;
+                align-items: end;
+                line-height: 75px;
+                font-size: 75px;
+                font-weight: 600; 
+                .sns-area{
                     display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 100px;
-                    height: 40px;
-                    border: 3px solid #e3e3e3;
-                    border-radius: 999px;
-                    font-size: 20px;
+                    gap: 15px;
+                    a{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100px;
+                        height: 40px;
+                        border: 3px solid #e3e3e3;
+                        border-radius: 999px;
+                        font-size: 20px;
+                    }
                 }
-            }
-            }
-      
-            a{
-                display: block;
-                font-size: 65px;
-                font-weight: 500;
-                
                 }
-          
+        
+                a{
+                    display: block;
+                    font-size: 65px;
+                    font-weight: 500;
+                    
+                    }
+            
+            }
+            .cc{
+                font-size: 14px;
+            }
         }
-        .cc{
-            font-size: 14px;
-            margin-bottom: 15px;
+        .footer-bg{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            width: 100%;
+            height: 500px;
+            .img{
+                background-image: url('./../img/abbg4.png');
+                background-repeat: no-repeat;
+                background-position: 0px 0px;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+            }
+            .overlay{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(0deg, #14141454 40%, #141414 95.95%);
+            }
         }
     }
 }
@@ -93,12 +94,14 @@ footer{
 @media(max-width: 940px){
     footer{
         .sc-contact{
-            .text-area{
-                .title{
-                    font-size: 60px;
-                }
-                a{
-                    font-size: 55px;
+            .contact-inner{
+                .text-area{
+                    .title{
+                        font-size: 60px;
+                    }
+                    a{
+                        font-size: 55px;
+                    }
                 }
             }
         }
@@ -107,33 +110,31 @@ footer{
 
 @media(max-width: 680px){
     footer{
-        margin-top: 0px;
-        padding-bottom: 10px;
         .sc-contact{
-            flex-direction: column;
-            align-items: center;
-            .text-area{
+            .contact-inner{
+                flex-direction: column;
                 align-items: center;
-                .title{
+                .text-area{
                     align-items: center;
-                    font-size: 40px;
-                    .sns-area{
-                        a{
-                            width: 80px;
-                            font-size: 16px;
+                    .title{
+                        align-items: center;
+                        font-size: 40px;
+                        .sns-area{
+                            a{
+                                width: 80px;
+                                font-size: 16px;
+                            }
                         }
                     }
+                    a{
+                        font-size: 35px;
+                        line-height: 37px;
+                    }
                 }
-                a{
-                    font-size: 35px;
-                    line-height: 37px;
-
+                .cc{
+                    margin-top: 50px;
                 }
-            }
-            .cc{
-                margin-top: 50px;
-
-            }
+        }
         }
     }
 }
@@ -141,23 +142,29 @@ footer{
 @media(max-width: 425px){
     footer{
         .sc-contact{
-            .text-area{
-                .title{
-                    flex-direction: column;
-                    gap: 0px;
-                    font-size: 40px;
-                    line-height: 50px;
-                    .sns-area{
-                        a{
-                            height: 30px;
+            .contact-inner{
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+
+                .text-area{
+                    .title{
+                        flex-direction: column;
+                        gap: 0px;
+                        font-size: 40px;
+                        line-height: 50px;
+                        .sns-area{
+                            a{
+                                height: 30px;
+                            }
                         }
                     }
+                    a{
+                        margin-top: 20px;
+                        font-size: 24px;
+                    }
                 }
-                a{
-                    margin-top: 20px;
-                    font-size: 24px;
-                }
-            }
+        }
         }
     }
 }

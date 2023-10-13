@@ -104,13 +104,13 @@ body {
 
 html {
   scroll-behavior: smooth;
-  overflow: hidden;
   font-family: "Pretendard";
 }
 
 body {
   background-color: #141414;
   color: #fff;
+  width: 100%;
   overflow-x: hidden;
 }
 body.hide {
@@ -211,6 +211,7 @@ li {
 }
 .header .header-inner {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   padding: 20px 40px;
   border-bottom: 1px solid rgba(237, 237, 237, 0.1607843137);
@@ -253,6 +254,7 @@ li {
 }
 .header .header-fix {
   position: absolute;
+  overflow: hidden;
   top: 18px;
   right: 2%;
   z-index: 777;
@@ -497,44 +499,22 @@ li {
   }
 }
 footer {
-  /*     position: relative;
-      margin-top: 100px;
-      background: linear-gradient(-55deg, #eeeeee, #4F8A8B, #FBD46D);
-      background-size: 300% 300%;
-      animation: gradient 10s ease infinite;
-      color: transparent;
-      -webkit-background-clip: text; */
-  margin-top: 150px;
-}
-footer .footer-bg {
-  position: absolute;
-  bottom: 0;
-  z-index: -1;
-  background-image: url("./../img/abbg3.png");
-  background-repeat: no-repeat;
-  background-position: 0px -680px;
   width: 100%;
-  height: 700px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-footer .footer-bg .overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(0deg, rgba(20, 20, 20, 0.3294117647) 55%, #141414 90.95%);
+  height: auto;
 }
 footer .sc-contact {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+footer .sc-contact .contact-inner {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: end;
   padding: 40px;
 }
-footer .sc-contact .text-area {
-  display: flex;
-  flex-direction: column;
-}
-footer .sc-contact .text-area .title {
+footer .sc-contact .contact-inner .text-area .title {
   display: flex;
   gap: 30px;
   align-items: end;
@@ -542,11 +522,11 @@ footer .sc-contact .text-area .title {
   font-size: 75px;
   font-weight: 600;
 }
-footer .sc-contact .text-area .title .sns-area {
+footer .sc-contact .contact-inner .text-area .title .sns-area {
   display: flex;
   gap: 15px;
 }
-footer .sc-contact .text-area .title .sns-area a {
+footer .sc-contact .contact-inner .text-area .title .sns-area a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -556,14 +536,37 @@ footer .sc-contact .text-area .title .sns-area a {
   border-radius: 999px;
   font-size: 20px;
 }
-footer .sc-contact .text-area a {
+footer .sc-contact .contact-inner .text-area a {
   display: block;
   font-size: 65px;
   font-weight: 500;
 }
-footer .sc-contact .cc {
+footer .sc-contact .contact-inner .cc {
   font-size: 14px;
-  margin-bottom: 15px;
+}
+footer .sc-contact .footer-bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 500px;
+}
+footer .sc-contact .footer-bg .img {
+  background-image: url("./../img/abbg4.png");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+footer .sc-contact .footer-bg .overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, rgba(20, 20, 20, 0.3294117647) 40%, #141414 95.95%);
 }
 
 @keyframes gradient {
@@ -581,52 +584,53 @@ footer .sc-contact .cc {
   }
 }
 @media (max-width: 940px) {
-  footer .sc-contact .text-area .title {
+  footer .sc-contact .contact-inner .text-area .title {
     font-size: 60px;
   }
-  footer .sc-contact .text-area a {
+  footer .sc-contact .contact-inner .text-area a {
     font-size: 55px;
   }
 }
 @media (max-width: 680px) {
-  footer {
-    margin-top: 0px;
-    padding-bottom: 10px;
-  }
-  footer .sc-contact {
+  footer .sc-contact .contact-inner {
     flex-direction: column;
     align-items: center;
   }
-  footer .sc-contact .text-area {
+  footer .sc-contact .contact-inner .text-area {
     align-items: center;
   }
-  footer .sc-contact .text-area .title {
+  footer .sc-contact .contact-inner .text-area .title {
     align-items: center;
     font-size: 40px;
   }
-  footer .sc-contact .text-area .title .sns-area a {
+  footer .sc-contact .contact-inner .text-area .title .sns-area a {
     width: 80px;
     font-size: 16px;
   }
-  footer .sc-contact .text-area a {
+  footer .sc-contact .contact-inner .text-area a {
     font-size: 35px;
     line-height: 37px;
   }
-  footer .sc-contact .cc {
+  footer .sc-contact .contact-inner .cc {
     margin-top: 50px;
   }
 }
 @media (max-width: 425px) {
-  footer .sc-contact .text-area .title {
+  footer .sc-contact .contact-inner {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  footer .sc-contact .contact-inner .text-area .title {
     flex-direction: column;
     gap: 0px;
     font-size: 40px;
     line-height: 50px;
   }
-  footer .sc-contact .text-area .title .sns-area a {
+  footer .sc-contact .contact-inner .text-area .title .sns-area a {
     height: 30px;
   }
-  footer .sc-contact .text-area a {
+  footer .sc-contact .contact-inner .text-area a {
     margin-top: 20px;
     font-size: 24px;
   }
@@ -638,7 +642,6 @@ footer .sc-contact .cc {
 .sc-about {
   position: relative;
   padding: 115px 0;
-  width: 100%;
   gap: 100px;
 }
 .sc-about .about-inner {
@@ -749,6 +752,7 @@ footer .sc-contact .cc {
 .sc-about .ab-bg {
   position: absolute;
   top: -20%;
+  left: 0;
   width: 100%;
   height: 100vh;
   z-index: -1;
@@ -762,29 +766,29 @@ footer .sc-contact .cc {
 .sc-about .ab-bg .img {
   background-image: url("./../img/abbg3.png");
   background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .sc-work {
-  width: 100%;
   height: auto;
-  padding: 20px;
 }
 .sc-work .work-list {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 800px);
-  gap: 2px;
+  overflow: hidden;
+  gap: 50px;
+  padding: 50px;
 }
 .sc-work .work-list .work-item {
   position: relative;
+  overflow: hidden;
   width: 100%;
-  height: auto;
-  padding: 30px;
+  height: 100%;
+  border-radius: 30px;
 }
 .sc-work .work-list .work-item:hover .img-box {
   overflow: hidden;
@@ -800,11 +804,10 @@ footer .sc-contact .cc {
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 30px;
-  overflow: hidden;
 }
 .sc-work .work-list .work-item .img-box .overlay {
   position: absolute;
+  overflow: hidden;
   top: 0;
   width: 100%;
   height: 100%;
@@ -815,8 +818,8 @@ footer .sc-contact .cc {
 .sc-work .work-list .work-item .img-box img {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 100%;
   width: 100%;
+  height: 100%;
   transition: 0.5s;
 }
 .sc-work .work-list .work-item:nth-child(1) {
@@ -1004,7 +1007,6 @@ footer .sc-contact .cc {
   .main .sc-work .work-list .work-item {
     width: 100%;
     height: 500px;
-    padding: 15px 0;
   }
 }
 @media (max-width: 425px) {
@@ -1033,6 +1035,10 @@ footer .sc-contact .cc {
   .sc-about .about-inner .swiper-area .area-wrapper .top-swiper .swiper-slide p {
     font-size: 14px;
   }
+  .sc-work .work-list {
+    gap: 20px;
+    padding: 20px;
+  }
   .sc-work .work-list .work-item .text-box {
     padding: 20px;
   }
@@ -1052,26 +1058,28 @@ footer .sc-contact .cc {
     font-size: 14px;
   }
   .sc-work .work-list .work-item .text-box .work-sns {
+    display: flex;
+    gap: 5px;
     font-size: 14px;
     padding-top: 20px;
   }
   .sc-work .work-list .work-item .text-box .work-sns.yellow a {
     background: #fbd46d;
-    padding: 7px 10px;
+    padding: 0px 12px;
     border-radius: 20px;
     color: #141414;
     font-weight: 500;
   }
   .sc-work .work-list .work-item .text-box .work-sns.green a {
     background: #4F8A8B;
-    padding: 7px 13px;
+    padding: 0px 12px;
     border-radius: 20px;
     color: #fff;
     font-weight: 500;
   }
   .sc-work .work-list .work-item .text-box .work-sns.gray a {
     background: #eeeeee;
-    padding: 7px 13px;
+    padding: 0px 12px;
     border-radius: 20px;
     color: #141414;
     font-weight: 500;

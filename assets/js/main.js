@@ -6,7 +6,7 @@ $(function(){
       setTimeout(function() {
         $("body").removeClass('hide')
         $(".sc-loader").fadeOut(1500);
-      },3000); // 3000밀리초 = 3초
+      },30); // 3000밀리초 = 3초
     });
 
       // 커서 커스텀
@@ -72,19 +72,6 @@ $(function(){
 
   if (matchMedia("screen and (min-width: 681px)").matches) {
 
-  // about 배경
-    const about = gsap.timeline({
-
-      scrollTrigger: {
-        trigger: 'main',
-        /* scrub:2, */ 
-        start: '0% 0%', 
-        end: '50% 100%', 
-    },
-    })
-    
-    about.from('.ab-bg',3,{opacity:0})
-
     //work 영역
     const work = gsap.timeline({
 
@@ -97,12 +84,12 @@ $(function(){
     },
     })
     
-    work.from('.sc-work .work-item:nth-child(2)',2,{opacity:0 ,yPercent:50 ,delay:0.5}),
-    work.from('.sc-work .work-item:nth-child(1)',2.5,{opacity:0 ,xPercent:-50,delay:0.5}),
-    work.from('.sc-work .work-item:nth-child(6)',3,{opacity:0 ,xPercent:50,delay:0.5}),
-    work.from('.sc-work .work-item:nth-child(4)',3,{opacity:0 ,yPercent:50,delay:0.5}),
-    work.from('.sc-work .work-item:nth-child(3)',3,{opacity:0 ,xPercent:-50,delay:0.5}),
-    work.from('.sc-work .work-item:nth-child(5)',3,{opacity:0 ,xPercent:50,delay:1})
+    work.from('.sc-work .work-item:nth-child(2)',2,{opacity:0 ,yPercent:50}),
+    work.from('.sc-work .work-item:nth-child(1)',2.5,{opacity:0 ,xPercent:-50}),
+    work.from('.sc-work .work-item:nth-child(6)',3,{opacity:0 ,xPercent:50}),
+    work.from('.sc-work .work-item:nth-child(4)',3,{opacity:0 ,yPercent:50}),
+    work.from('.sc-work .work-item:nth-child(3)',3,{opacity:0 ,xPercent:-50}),
+    work.from('.sc-work .work-item:nth-child(5)',3,{opacity:0 ,xPercent:50})
 
     // 680px 이상에서 사용할 스크립트
   } else {
@@ -121,12 +108,12 @@ $(function(){
         /* markers:true,  */
     },
     })
-    mwork.from('.sc-work .work-item:nth-child(1)',3,{opacity:0 ,xPercent:50 ,delay:1}),
-    mwork.from('.sc-work .work-item:nth-child(2)',3,{opacity:0 ,xPercent:-50,delay:1}),
-    mwork.from('.sc-work .work-item:nth-child(3)',3,{opacity:0 ,xPercent:50,delay:1}),
-    mwork.from('.sc-work .work-item:nth-child(4)',3,{opacity:0 ,xPercent:-50,delay:1}),
-    mwork.from('.sc-work .work-item:nth-child(5)',3,{opacity:0 ,xPercent:50,delay:1}),
-    mwork.from('.sc-work .work-item:nth-child(6)',3,{opacity:0 ,xPercent:-50,delay:1})
+    mwork.from('.sc-work .work-item:nth-child(1)',3,{opacity:0 ,xPercent:50}),
+    mwork.from('.sc-work .work-item:nth-child(2)',3,{opacity:0 ,xPercent:-50}),
+    mwork.from('.sc-work .work-item:nth-child(3)',3,{opacity:0 ,xPercent:50}),
+    mwork.from('.sc-work .work-item:nth-child(4)',3,{opacity:0 ,xPercent:-50}),
+    mwork.from('.sc-work .work-item:nth-child(5)',3,{opacity:0 ,xPercent:50}),
+    mwork.from('.sc-work .work-item:nth-child(6)',3,{opacity:0 ,xPercent:-50})
 
     // 680px 미만에서 사용할 스크립트
   }
@@ -137,14 +124,16 @@ $(function(){
       scrollTrigger: {
         trigger: 'main',
         scrub:1, 
-        start: '86% 0%', 
-        end: '86% 100%', 
-        /* markers:true, */
+        start: '82% 0%', 
+        end: '82.5% 100%', 
+       /* markers:true, */
     },
     })
 
-    footer.from('.footer-bg, .sc-contact',{opacity:0})
+    footer.from('.sc-contact','.footer-bg',{opacity:0})
     
+
+
     lastWidth = window.innerWidth;
     $(window).resize(function(){
     if(window.innerWidth != lastWidth){
