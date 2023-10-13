@@ -271,14 +271,14 @@
                 }
 
                 .em-box{
-              
-    
                     em{
-                        font-size: 15px;
+                        display: inline-block;
+                        font-size: 14px;
                         background: #1414147c;
-                        padding: 7px 13px;
+                        padding: 0px 12px;
                         border-radius: 20px;
                         text-align: center;
+                        margin-top: 5px;
                     }
 
                 }
@@ -464,7 +464,7 @@
             .work-item{
                 width: 100%;
                 height: 500px;
-                padding: 20px 0;
+                padding: 15px 0;
             }
             }
         }
@@ -519,7 +519,8 @@
                     .em-box{
                         em{
                             font-size: 14px;
-                            padding: 5px 12px;
+                            padding: 0px 12px;
+                            margin-top: 5px;
 
                         }
                     }
