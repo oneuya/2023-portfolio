@@ -6,7 +6,7 @@ $(function(){
       setTimeout(function() {
         $("body").removeClass('hide')
         $(".sc-loader").fadeOut(1500);
-      },30); // 3000밀리초 = 3초
+      },3000); // 3000밀리초 = 3초
     });
 
       // 커서 커스텀
